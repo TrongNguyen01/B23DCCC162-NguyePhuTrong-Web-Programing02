@@ -1,0 +1,189 @@
+bài 1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 1</title>
+</head>
+<body>
+    <p id="title">hello</p>
+    <script>
+        var title = document.getElementById('title').innerHTML = 'Hello, Dom!';
+        alert(title);
+    </script>
+</body>
+</html>
+
+bài2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 2</title>
+<p id="text">HElLO</p>
+<script>
+  document.getElementById('text').style.color = "red";
+</script>
+
+
+bài 3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 3</title>
+</head>
+<body>
+    <ul id="list">
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+
+
+    </ul>
+    <script>
+                var newListItem = document.createElement("li");
+        newListItem.innerHTML = "New Item";
+        var list = document.getElementById("list");
+        list.appendChild(newListItem);
+        
+    </script>
+
+
+</body>
+
+
+bài 4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai4</title>
+</head>
+<body>
+    <div id="remove-me"> xoaphantu</div>
+    <div id="trong"> xoapt</div>
+    <script>
+        let toremove = document.querySelector("#remove-me");
+        toremove.remove()
+    </script>
+
+</body>
+
+
+bài 5
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai5</title>
+</head>
+<body>
+    <img id="image" src="old-me.img"
+</body>
+
+
+
+bài 6
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai6</title>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+
+    <script>
+        var button = document.getElementById("btn");
+        button.addEventListener("click", function() {
+            alert("Button was clicked!");
+        });
+    </script>
+</body>
+</html>
+
+
+bài 8
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai8</title>
+</head>
+<body>
+    <div id="table-container"></div>
+
+    <script>
+        var table = document.createElement("table");
+        table.style.borderCollapse = "collapse";
+        for (var i = 0; i < 3; i++) {
+            var row = document.createElement("tr");
+            for (var j = 0; j < 3; j++) {
+                var cell = document.createElement("td");
+                cell.innerHTML = "Row " + (i + 1) + " Cell " + (j + 1);
+                cell.style.border = "1px solid black";
+                cell.style.padding = "10px";
+                row.appendChild(cell);
+            }
+
+            table.appendChild(row);
+        }
+        document.getElementById("table-container").appendChild(table);
+    </script>
+</body>
+</html>
+
+
+
+bài 9
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai9</title>
+</head>
+<body>
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <div>Div 3</div>
+    <div>Div 4</div>
+
+    <script>
+        var divs = document.getElementsByTagName("div");
+        var divCount = divs.length;
+        alert("There are " + divCount + " <div> elements on this page.");
+    </script>
+</body>
+</html>
+
+
+bài 10
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai10</title>
+</head>
+<body>
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+
+    <script>
+        var items = document.getElementsByClassName("item");
+        for (var i = 0; i < items.length; i++) {
+            items[i].innerHTML = "Updated item";
+        }
+    </script>
+</body>
+</html>
